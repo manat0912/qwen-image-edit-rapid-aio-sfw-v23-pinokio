@@ -1,6 +1,8 @@
 module.exports = {
+  requires: {
+    bundle: "ai"
+  },
   run: [
-    // Edit this step to customize the git repository to use
     {
       method: "shell.run",
       params: {
@@ -9,19 +11,29 @@ module.exports = {
         ]
       }
     },
-    // Edit this step with your custom install commands
     {
       method: "shell.run",
       params: {
-        venv: "env",                // Edit this to customize the venv folder path
-        path: "app",                // Edit this to customize the path to start the shell from
+        venv: "env",
+        path: "app",
         message: [
           "uv pip install gradio devicetorch",
+          "uv tool install hf",
+          "uv pip install hf-xet pip",
           "uv pip install -r requirements.txt"
         ]
       }
     },
-    // Delete this step if your project does not use torch
+    {
+      method: "hf.download",
+      params: {
+        path: "app",
+        "_": [ "IllyaS08/qwen-image-edit-rapid-aio-sfw-v23" ],
+        "repo-type": "space",
+        "local-dir": "checkpoints",
+        "token": "False"
+      }
+    },
     {
       method: "script.start",
       params: {

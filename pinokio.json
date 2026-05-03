@@ -2,6 +2,11 @@
   "title": "qwen-image-edit-rapid-aio-sfw-v23",
   "description": "",
   "icon": "icon.png",
-  "links": [],
+  "links": [
+    {
+      "title": "website",
+      "value": "https://huggingface.co/spaces/IllyaS08/qwen-image-edit-rapid-aio-sfw-v23"
+    }
+  ],
   "posts": []
 }
