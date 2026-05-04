@@ -1,5 +1,5 @@
 {
-  "title": "qwen-image-edit-rapid-aio-sfw-v23",
+  "title": "qwen-image-edit",
   "description": "",
   "icon": "icon.png",
   "links": [
@@ -8,5 +8,8 @@
       "value": "https://huggingface.co/spaces/IllyaS08/qwen-image-edit-rapid-aio-sfw-v23"
     }
   ],
-  "posts": []
+  "posts": [],
+  "plugin": {
+    "menu": []
+  }
 }
